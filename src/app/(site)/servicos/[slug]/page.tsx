@@ -9,6 +9,10 @@ import { loadMDX } from "@/lib/load-mdx";
 import TagChips from "@/components/TagChips";
 import { getItem, getSlugs } from "@/lib/content";
 
+export const dynamicParams = false;
+export const dynamic = "force-static";
+
+
 const serviceGalleries: Record<string, { src: string; alt: string }[]> = {
   pocket: [
     { src: "/images/servicos/pocket/1.jpg", alt: "Imagem de exemplo 1" },
@@ -31,8 +35,8 @@ export default async function ServicoPage({
 }) {
   const { slug } = await params;
 
-  const slugs = new Set(getSlugs("services"));
-  if (!slugs.has(slug)) return notFound();
+  //const slugs = new Set(getSlugs("services"));
+  //if (!slugs.has(slug)) return notFound();
 
   const service = getItem("services", slug);
 

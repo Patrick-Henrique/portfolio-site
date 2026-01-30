@@ -10,6 +10,10 @@ import Prose from "@/components/Prose";
 import RelatedProjects from "@/components/RelatedProjects";
 import TagChips from "@/components/TagChips";
 
+export const dynamicParams = false;
+export const dynamic = "force-static";
+
+
 const portfolioGalleries: Record<string, { src: string; alt: string }[]> = {
   "ap-aurora": [
     { src: "/images/portfolio/ap-aurora/3.jpg", alt: "Exemplo imagem 1" },
@@ -39,8 +43,8 @@ export default async function ProjectPage({
 }) {
   const { slug } = await params;
 
-  const slugs = new Set(getSlugs("projects"));
-  if (!slugs.has(slug)) return notFound();
+  //const slugs = new Set(getSlugs("projects"));
+  //if (!slugs.has(slug)) return notFound();
 
   const project = getItem("projects", slug);
 
