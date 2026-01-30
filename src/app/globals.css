@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  /* Paleta neutra */
+  --bg: 255 255 255;
+  --fg: 24 24 27;
+
+  --muted: 113 113 122;
+  --border: 228 228 231;
+
+  --card: 255 255 255;
+  --shadow: 0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+
+  --brand: 24 24 27;
+  --brand-contrast: 255 255 255;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(24, 24, 27, 0.35);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+input, textarea, select {
+  background: rgb(var(--card));
+  border-color: rgb(var(--border));
+}
