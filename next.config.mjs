@@ -9,6 +9,7 @@ const nextConfig = {
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
+    providerImportSource: undefined,
     rehypePlugins: [
       [
         (await import("rehype-pretty-code")).default,
