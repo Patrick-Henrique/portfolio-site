@@ -92,7 +92,7 @@ export default async function ProjectPage({
       </div>
 
       <Prose>
-        <Body slug={slug} />
+        <Body />
       </Prose>
       <Gallery images={portfolioGalleries[slug] ?? []} />
       <EndCTA

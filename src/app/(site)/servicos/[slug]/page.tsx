@@ -104,7 +104,7 @@ export default async function ServicoPage({
       </header>
 
       <Prose>
-        <Body slug={slug} />
+        <Body />
       </Prose>
       <Gallery images={serviceGalleries[slug] ?? []} />
 
